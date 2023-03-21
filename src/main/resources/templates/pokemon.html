@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>My Pokemon</title>
+</head>
+<body>
+<h1>Pokemon in your PC</h1>
+<form>
+<table>
+	<th>ID</th>
+	<th>Name</th>
+	<th>Nickname</th>
+	<th>Level</th>
+	<th>First Type</th>
+	<th>Secondary Type</th>
+	<tr th:each="currentPokemon : ${pokemon}">
+		<td th:text="${currentPokemon.id}"/>
+		<td th:text="${currentPokemon.name}"/>
+		<td th:text="${currentPokemon.nickname}"/>
+		<td th:text="${currentPokemon.level}"/>
+		<td th:text="${currentPokemon.type.type1}"/>
+		<td th:text="${currentPokemon.type.type2}"/>
+		<td><a th:href="@{/edit/{id}(id=${currentPokemon.id})}">Edit</a></td>
+		<td><a th:href="@{/delete/{id}(id=${currentPokemon.id})}">Delete</a></td>
+	</tr>
+</table>
+</form>
+<a href="/addPokemon">Add a new Pokemon</a>
+
+</body>
+</html>
