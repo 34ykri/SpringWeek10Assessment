@@ -9,6 +9,8 @@ import javax.persistence.Id;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import lombok.Data;
+
 /**
  * @author akvang - Alexander Vang
  * CIS175 - Spring 2023

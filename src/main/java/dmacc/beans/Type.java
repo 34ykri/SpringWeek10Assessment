@@ -4,7 +4,7 @@
 package dmacc.beans;
 
 import javax.persistence.Embeddable;
-
+import lombok.Data;
 /**
  * @author akvang - Alexander Vang
  * CIS175 - Spring 2023
